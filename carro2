@@ -1,1 +1,43 @@
 
+class Carro:
+	def __init__(self,marca="",rodas = [],volante = "",motor =[],tanque=[]):
+		self.__marca = marca
+		self.__volante = volante
+		self.__rodas = rodas 
+		self.__motor = motor 
+		self.__tanque = tanque 
+	
+	def getvolante(self):
+		self.__volante = volante
+	def setvoltante(self,volante):
+		return self.__volante 
+
+	def gettanque(self):
+		self.__tanque = tanque
+	def settanque(self,tanque):
+		return self.__tanque
+
+	def getmarca(self):
+		self.__marca = marca
+	def setmarca(self,marca):
+		return self.__marca 
+
+	def setrodas(self,rodas):
+		return self.__rodas
+	def getrodas(self):
+		self.__rodas = rodas 
+
+	def dicmotor(self):
+		mot = {}
+		mot[self.__motor[0]] = self.__motor[1] 
+		return mot
+	def carroCompleto(self):
+		 if self.__marca  and len(self.__rodas) == 4 and self.__volante and len(self.__motor) == 2 and len(self.__tanque) == 2:
+		 	return "Carro Completo"
+		 else:
+		 	return "Carro Incompleto" 
+
+a = Carro("Volvo",["11/12/2019","12/03/2019","17/08/2019","19/04/2019"],"Volvo",["Fiat","v8"],[100,10])
+print(a.carroCompleto())
+
+print(a.dicmotor())
